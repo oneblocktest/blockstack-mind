@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Person} from 'blockstack';
-import Appok from './App/Appok.js';
+import Mindmap from "./component/mindmap";
 
 const avatarFallbackImage = 'https://s3.amazonaws.com/onename/avatar-placeholder.png';
 export const ME_FILENAME = 'mychart.json'
@@ -14,10 +14,7 @@ export default class Profile extends Component {
   	  person: {
   	  	name() {
           return 'Anonymous';
-        }/* ,
-  	  	avatarUrl() {
-  	  	  return avatarFallbackImage;
-  	  	}, */
+        }
   	  },
   	};
   }
@@ -25,16 +22,17 @@ export default class Profile extends Component {
   render() {
     const { handleSignOut, userSession } = this.props;
     const { person } = this.state;
-    console.log(person)
     return (
       !userSession.isSignInPending() ?
       <div className="panel-welcome" id="section-2">
         <div className="avatar-section">
          <img src={ person.avatarUrl() ? person.avatarUrl() : avatarFallbackImage } className="img-rounded avatar" id="avatar-image"   alt=""/>
+         <h1> <span id="heading-name">{ person.name() ? person.name() : 'Nameless Person' }</span>的思维脑图</h1>
         </div>
-        <h1> <span id="heading-name">{ person.name() ? person.name() : 'Nameless Person' }</span>的隐私图表</h1>
-     
-        <Appok userSession={userSession} />
+       
+        <div className="mindmap" id="mindmap">
+        <Mindmap userSession={userSession} />
+        </div>
         <p className="lead">
       
           <button
@@ -58,6 +56,3 @@ export default class Profile extends Component {
 
  
 }
-
-
-//width:30% height:30%

@@ -1,35 +1,22 @@
-# My Privacy chart v0.1.0
+# blockstack-mind v0.0.0
 
-## **愿景**（<font color="red">基本等于吹牛</font>）
-* **核心价值**  致力于打造一站式高端私密交互应用，`My garden I'm the Lord`.协同网络海量数据汇聚，自动实现AI与大数据分析，精准研判。打造现代`拉普拉斯妖`。
-* **可用场景** :
-    * 作为市场交易数据的演示端，与各种交易市场形成绑定，实现可视化交易。身份证认证强加密与数据独立储存绝对保证APIkey安全，可做到一体化跨站式交易与分析，并支持第三方AI插件，轻松实现量化交易。让交易更正自主与便捷
-    * 私密财务系统的可视化，统一身份认证，数据成分布式存储，高永久性，无需灾备。可利用插件实现共识化数据统一维护。保证数据唯一性。
-    * 数据验证机，利用多重身份认证机制与网络数据定时捕获，做到数据公证与私密验证。
-    * 数据分享与销售，利用身份机制实现数据定向权限分享与数据、服务销售
-* **数据变现** 实现生产数据演示与销售为一体，插件开发盈利。
-
-## 流程图
-![流程图](https://github.com/oneblocktest/mychart/raw/master/mypic/mychart.png)
-
-## 实例图
-![实例图](https://github.com/oneblocktest/mychart/raw/master/mypic/mychartDEMO.jpg)
-
+## **简要说明**
+* 原来作品不适合做数据分享。本来想利用blink-mind做一个插件嵌入原来作品做思维脑图分享，但是个人技术有限。感觉干脆直接做一个思维脑图单独作品容易一些。计划单独做一个思维老图分享。
+* 这儿首先感谢`@awehook`提供的blink-mind的插件，避免了再次造轮子。让我做不到事情变成可能。[插件地址:https://github.com/awehook/blink-mind](https://github.com/awehook/blink-mind)
+## **流程图**
+  ![流程图](./mypic/blockstack-mind.png)
+## **实例图**
+  ![实例图](./mypic/blockstack-minddemo.png)
 ## 需求设计
-* **数据隐私性保护**
-* **分布式的数据统一性,可维护**
+* **思维脑图制作**
 * **支持多设备**
-* **图表显示自定义**
-* **自动获取自定义网络数据**
-* **规范API接口，支持第三方插件**
-* **有限范围内数据分享与销售**
+* **群组内思维脑图分享**
 
 ## 实现方式
 * **主体前端框架**：`react`
 * **身份证认证与加密**：`blockstack`
-* **表格框架**:`bootstrap`
-* **图形框架**：`Echart`
-* **数据存储**：`blocstack.gaia`、`IPFS`
+* **图形框架**：`blink-mind`
+* **数据存储**：`blocstack.gaia`、`radiks`
 
 ## 目前进度
  ### var=0
@@ -48,35 +35,3 @@
 ```code
     npm run build
 ```
-## 目前具体实现功能
-* 启用blockstack身份认证
-* 可自动获取coingecko部分虚拟币价格，根据录入仓位信息，进行计算显示
-    * 目前支持虚拟币表：
-```code
-    coins = [
-      "bitcoin",
-      "eos",
-      "cosmos",
-      "blockstack",
-      "bitcoin-cash",
-      "ethereum",
-      "ethereum-classic",
-      "monero",
-      "dash",
-      "beam",
-      "grin",
-      "steem",
-      "algorand",
-      "zcash",
-      "ontology",
-      "super-zero"
-    ];
-```
-* 说明录入过程中目前请输入coin全名
-  * 比特币请输入`bitcoin`,非**BTC**
-
-## 下一步准备实现功能
-* 私人数据的加密存储与解密显示
-* 录入信息的图像显示
-* 建立简易API接口
-

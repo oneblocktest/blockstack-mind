@@ -1,6 +1,6 @@
 {
-  "short_name": "my charts",
-  "name": "Create React App Sample",
+  "short_name": "blockstack-mind",
+  "name": "blockstack-mind",
   "icons": [
     {
       "src": "favicon.ico",

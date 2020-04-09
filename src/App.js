@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
-//import './App.css';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
-//import Table from './Table.js';
-//import Form from './Form.js';
+
+//import 'bootstrap/dist/css/bootstrap.css';
+//import 'bootstrap/dist/css/bootstrap-theme.css';
+
 import {UserSession, AppConfig } from 'blockstack';
 import Signin from './Signin.js';
 import Profile from './Profile.js';
@@ -14,18 +12,6 @@ export const userSession = new UserSession({ appConfig: appConfig })  //建立�
 
 class App extends Component{
 
-/*  constructor() {
-        super()
-        this.appConfig = new AppConfig()  
-        this.userSession = new UserSession()
-      } */
-
-
-/*   state={
-    characters:[],
-    pricedata:[]
-  };
- */
 
 handleSignIn(e) {                //登录改变userSession属性
     e.preventDefault();
